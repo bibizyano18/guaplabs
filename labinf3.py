@@ -15,4 +15,29 @@ string = string.split()
 for i in range(len(string)):
     if len(string[i]) == key:
         words.append(string[i])
-print("Result:", len(words))
+# dop
+
+def sort(s):
+    for i in range(len(words)):
+        c = 0
+        for j in range(len(s)-1):
+            while c <= len(s[j]):
+                if ord(s[j][c]) > ord(s[j+1][c]):
+                    s[j], s[j+1] = s[j+1], s[j]
+                    c = len(s[j]) + 100
+                else:
+                    if ord(s[j][c]) == ord(s[j+1][c]):
+                        c = c + 1
+                    else:
+                        c = len(s[j]) + 100
+                if c == len(s[j]):
+                    c = c + 1
+            c = 0
+    return s
+
+
+sort(words)
+
+
+
+print("Result:", len(words), words)
