@@ -18,7 +18,7 @@ for i in range(len(string)):
 # dop
 
 def sort(s):
-    for i in range(len(words)):
+    for i in range(len(s)):
         c = 0
         for j in range(len(s)-1):
             while c <= len(s[j]):
